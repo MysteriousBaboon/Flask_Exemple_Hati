@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes des étudiants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+
+        h1 {
+            text-align: center;
+        }
+
+
+        .student-note {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1>Notes des étudiants</h1>
+
+
+{% for student in students %}
+    <div class="student-note">
+        <p><strong>{{ student[1] }} {{ student[2] }}</strong></p>
+        <p>Note : {{ student[3] }}</p>
+    </div>
+{% endfor %}
+
+
+</body>
+</html>
