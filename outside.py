@@ -6,8 +6,8 @@ from PIL import Image, ImageFilter
 import io
 import time
 
+# If you use another session.
 boto3.setup_default_session(profile_name='oclock')
-
 s3 = boto3.client('s3')
 s3.download_file('bucketanuno', 'drapeau-anne-stokes-pirate-pr.png', 'unaltered.png')
 
